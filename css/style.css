@@ -47,6 +47,11 @@ body{
 
 /* NORMALIZE */
 
+	body.dark {
+		background-color: rgba(0, 0, 0, 0.911);
+		transition: all 0.5s;
+	}
+
 header{
 	display: flex;
 	justify-content: space-between;
@@ -67,6 +72,15 @@ header{
 	font-size: xx-large;
 }
 
+	header.dark{
+		background-color: #000000;
+	}
+
+	header.dark i, header.dark h1{
+		color: white;
+		transition: all 0.5s;
+	}
+
 header h1, .navbar-list{
     display: none;
 }
@@ -85,6 +99,36 @@ header h1, .navbar-list{
 	color: rgba(255, 255, 255, 0.897);
 }
 
+	.navbar-list.dark  a{
+		color: #ffffff;
+	}
+
+	.navbar-list.dark a:hover{
+		color: black;
+	}
+
+/* BOTON DE CAMBIO DE COLOR */
+
+.color-change-button{
+	background-color: #000000;
+	color: white;
+
+	padding: 5px 10px;
+	margin-bottom: 1px;
+	cursor: pointer;
+	position: relative;
+
+	font-weight: 700;
+
+	border-radius: 50px;
+	border: none;
+	transition: all .5s;
+}
+
+	.color-change-button.dark {
+		background-color: white;
+		color: black;
+	}
 
 /* MENU HAMBURGUESA */
 .bars-menu {
@@ -100,7 +144,7 @@ header h1, .navbar-list{
 #toggle-menu:checked ~ .navbar-list{
 	display: flex;
 	flex-flow: column;
-	row-gap: 30px;
+	row-gap: 25px;
 	
 	position: fixed;
 	right: 0;
@@ -132,9 +176,23 @@ header h1, .navbar-list{
 	margin: auto;
 	margin-top: 20px;
 	text-align: center;
+
+	transition: all 0.5s;
 }
 
+	section.dark h1, section.dark p{
+		color: white;
+		transition: all 0.5s;
+	}
+
 /* CURSOS */
+
+	.section-course.dark .course-card{
+		color: white;
+		background-color: #000000;
+
+		transition: 0.2s;
+	}
 
 .course-card{
 	display: flex;
@@ -150,6 +208,8 @@ header h1, .navbar-list{
 	background-color: var(--D);
 	border: #015366 ;
 	border-radius: 20px;
+
+	transition: all 0.2s;
 }
 
 .course-card:hover{
@@ -167,21 +227,27 @@ header h1, .navbar-list{
 
 .course-desc h1{
 	margin-bottom: 15px;
+
+	transition: all 0.5s;
 }
 
 .course-desc p{
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	padding: 0 10px;
+
+	transition: all 0.5s;
 }
 
 .buy{
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 
 	font-family: var(--textos);
 	font-size: larger;
+
+	transition: all 0.2s;
 }
 
 .buy button{
@@ -204,6 +270,8 @@ header h1, .navbar-list{
 	margin-top: 50px;
 	padding: 35px 30px 30px;
 	background-color: rgba(0, 0, 0, 0.911);
+
+	transition: all 0.5s;
 }
 
 .footer-ops{
@@ -239,6 +307,7 @@ header h1, .navbar-list{
 	transform: translateY(-3px);
 	transition: .2s;
 }
+
 
 /* MEDIA QUERIES */
 
